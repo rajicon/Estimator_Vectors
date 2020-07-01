@@ -177,7 +177,7 @@ except ImportError:
         will use the optimized version from word2vec_inner instead.
         """
         
-        print('python version of ccv train_batch_sg not implemented yet'+8)
+        print('python version of ev train_batch_sg not implemented yet'+8)
 
         return 
 
@@ -190,7 +190,7 @@ except ImportError:
         will use the optimized version from word2vec_inner instead.
         """
         
-        print('python version of ccv train_batch_cbow not implemented'+8)
+        print('python version of ev train_batch_cbow not implemented'+8)
 
         return
 
@@ -203,7 +203,7 @@ except ImportError:
         will use the optimized version from word2vec_inner instead.
         """
 
-        print('python version of ccv score_sentence_sg not implemented'+8)
+        print('python version of ev score_sentence_sg not implemented'+8)
         
         return
 
@@ -216,7 +216,7 @@ except ImportError:
         will use the optimized version from word2vec_inner instead.
         """
 
-        print('python version of ccv score_sentence_cbow not implemented'+8)
+        print('python version of ev score_sentence_cbow not implemented'+8)
         
         return
 
@@ -224,7 +224,7 @@ except ImportError:
 def train_sg_pair(model, word, context_index, alpha, learn_vectors=True, learn_hidden=True,
                   context_vectors=None, context_locks=None, compute_loss=False, is_ft=False):
                   
-    print('python version of ccv train_sg_pair not implemented yet'+7)
+    print('python version of ev train_sg_pair not implemented yet'+7)
 
     return 
 
@@ -232,7 +232,7 @@ def train_sg_pair(model, word, context_index, alpha, learn_vectors=True, learn_h
 def train_cbow_pair(model, word, input_word_indices, l1, alpha, learn_vectors=True, learn_hidden=True,
                     compute_loss=False, context_vectors=None, context_locks=None, is_ft=False):
 
-    print('python version of ccv train_cbow_pair not implemented yet'+7)
+    print('python version of ev train_cbow_pair not implemented yet'+7)
 
     return
 
@@ -277,7 +277,7 @@ def produce_subword_dict2(dictionary, min_ngram, max_ngram, min_freq=3):
         if ngram_counter[my_subword] < min_freq:
             filtered_out_ngram = filtered_out_ngram + 1
             
-    print(str(filtered_out_ngram) + ' ngrams filtered out because dont occur in enough words!')
+    #print(str(filtered_out_ngram) + ' ngrams filtered out because dont occur in enough words!')
                     
     for key in dictionary:
         
@@ -309,7 +309,7 @@ def produce_subword_dict2(dictionary, min_ngram, max_ngram, min_freq=3):
     for i in range(len(dictionary)):
         index_subword_breakdown.append([])
                 
-    print(np.shape(index_subword_breakdown))
+    #print(np.shape(index_subword_breakdown))
     
     for key in subword_breakdown:
     
@@ -347,12 +347,12 @@ def produce_subword_dict2(dictionary, min_ngram, max_ngram, min_freq=3):
     print(np.shape(index_subword_breakdown))
     #print('dodrio'+3)
     '''
-    print('finished building subwords')
+    #print('finished building subwords')
     
-    print(np.shape(subword_breakdown))
-    print(padding_number)
-    print(np.shape(index_subword_breakdown))
-    print(largest_breakdown_amount)
+    #print(np.shape(subword_breakdown))
+    #print(padding_number)
+    #print(np.shape(index_subword_breakdown))
+    #print(largest_breakdown_amount)
     
     #print(subword_breakdown['road'])
     #print(subword_breakdown['cat'])
@@ -394,7 +394,7 @@ def produce_subword_dict(dictionary, min_ngram, max_ngram, min_freq=3):
             
 
             
-    print(str(filtered_out_ngram) + ' ngrams filtered out because dont occur in enough words!')
+    #print(str(filtered_out_ngram) + ' ngrams filtered out because dont occur in enough words!')
                     
     for key in dictionary:
         
@@ -427,7 +427,7 @@ def produce_subword_dict(dictionary, min_ngram, max_ngram, min_freq=3):
     for i in range(len(dictionary)):
         index_subword_breakdown.append([])
                 
-    print(np.shape(index_subword_breakdown))
+    #print(np.shape(index_subword_breakdown))
     
     for key in subword_breakdown:
     
@@ -465,12 +465,12 @@ def produce_subword_dict(dictionary, min_ngram, max_ngram, min_freq=3):
     print(np.shape(index_subword_breakdown))
     #print('dodrio'+3)
     '''
-    print('finished building subwords')
+    #print('finished building subwords')
     
-    print(np.shape(subword_breakdown))
-    print(padding_number)
-    print(np.shape(index_subword_breakdown))
-    print(largest_breakdown_amount)
+    #print(np.shape(subword_breakdown))
+    #print(padding_number)
+    #print(np.shape(index_subword_breakdown))
+    #print(largest_breakdown_amount)
     
     #print(subword_breakdown['road'])
     #print(subword_breakdown['cat'])
@@ -712,8 +712,8 @@ class EstimatorVecs(BaseWordEmbeddingsModel):
         self.word.vectors = self.trainables.syn1neg  #hopefully this works, we'll see
         self.sub.vectors = self.trainables.syn2subword  #so don't need to set earlier
 
-        print(self.skipped_pairs[0])
-        print('single parameter is '+str(self.single_parameter[0]))
+        #print(self.skipped_pairs[0])
+        #print('single parameter is '+str(self.single_parameter[0]))
 
         
     #no changes yet
